@@ -19,7 +19,7 @@ console.log(skip, limit);
     console.log('Fetched orders:', orders); 
     res.json(orders);
   } catch (error) {
-    console.error('Error fetching orders:', error); // Log the error
+    console.error('Error fetching orders:', error); 
     res.status(500).json({ error: 'Failed to fetch orders' });
   }
 });
