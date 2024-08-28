@@ -13,10 +13,10 @@ async function fetchOrders(page = 1, limit = 10) {
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [orders, setOrders] = useState([]);
-  const totalPages = 5;  // Set total pages for pagination
+  const totalPages = 10;
 
   const loadOrders = async (page: number) => {
-    const fetchedOrders = await fetchOrders(page, 4);
+    const fetchedOrders = await fetchOrders(page, 5);
     setOrders(fetchedOrders);
   };
 
