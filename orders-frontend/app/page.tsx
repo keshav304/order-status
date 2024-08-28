@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import OrdersTable from '@/components/OrdersTable';
 
 async function fetchOrders(page = 1, limit = 10) {
-  const res = await fetch(`http://localhost:4000/orders?page=${page}&limit=${limit}`);
+  const res = await fetch(`https://order-status-46s3.onrender.com/orders?page=${page}&limit=${limit}`);
   if (!res.ok) {
     throw new Error('Failed to fetch orders');
   }
